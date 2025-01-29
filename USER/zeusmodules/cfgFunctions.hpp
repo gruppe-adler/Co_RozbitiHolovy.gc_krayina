@@ -17,9 +17,11 @@ class grad_zeusmodules {
         class trafficControl { postInit = 1; };
         class layerManagement { postInit = 1; };
         class simpleConvoy;
+        class sortConvoy;
         class spawnVictim;
         class spawnVictimVehicleFX;
         class fillAmmoBox;
         class artyFire;
+        class factoryCrowd;
     };
 };

@@ -55,54 +55,62 @@
   } forEach allCurators;
 };
 
-["Guardian Angel - Mission Progress", "Civ Convoy 1 Spawn", {
-     params ["_position", "_object"];
-     
-     missionNameSpace setVariable ["grad_civ_convoy_1", true, true];
+{
+     private _identifier = _x;
+     ["Rozbiti Holovy - Convoy", _identifier, {
+          params ["_position", "_object"];
+          
+          missionNameSpace setVariable ["enemy_convoy_motorized", true, true];
 
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "Civ Convoy 1 Spawn"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
+          // remove this element from zeus
+          private _index = [zen_custom_modules_list, "Motorized"] call BIS_fnc_findNestedElement;
+          zen_custom_modules_list deleteAt _index;
+          [] call zen_common_fnc_reloadDisplay;
+          
+     }] call zen_custom_modules_fnc_register;
 
-["Guardian Angel - Mission Progress", "Civ Convoy 2 Spawn", {
-     params ["_position", "_object"];
-     
-     missionNameSpace setVariable ["grad_civ_convoy_2", true, true];
+     ["Rozbiti Holovy - Convoy", _identifier, {
+          params ["_position", "_object"];
+          
+          missionNameSpace setVariable ["enemy_convoy_trucks_1", true, true];
 
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "Civ Convoy 2 Spawn"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
+          // remove this element from zeus
+          private _index = [zen_custom_modules_list, "enemy_convoy_trucks_1"] call BIS_fnc_findNestedElement;
+          zen_custom_modules_list deleteAt _index;
+          [] call zen_common_fnc_reloadDisplay;
+          
+     }] call zen_custom_modules_fnc_register;
 
-["Guardian Angel - Mission Progress", "Civ Convoy 3 Spawn", {
-     params ["_position", "_object"];
-     
-     missionNameSpace setVariable ["grad_civ_convoy_3", true, true];
+     ["Rozbiti Holovy - Convoy", _identifier, {
+          params ["_position", "_object"];
+          
+          missionNameSpace setVariable ["enemy_convoy_tanks", true, true];
 
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "Civ Convoy 3 Spawn"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
+          // remove this element from zeus
+          private _index = [zen_custom_modules_list, "enemy_convoy_tanks"] call BIS_fnc_findNestedElement;
+          zen_custom_modules_list deleteAt _index;
+          [] call zen_common_fnc_reloadDisplay;
+          
+     }] call zen_custom_modules_fnc_register;
 
-["Guardian Angel - Mission Progress", "Civ Convoy 4 Spawn", {
-     params ["_position", "_object"];
-     
-     missionNameSpace setVariable ["grad_civ_convoy_4", true, true];
+     ["Rozbiti Holovy - Convoy", _identifier, {
+          params ["_position", "_object"];
+          
+          missionNameSpace setVariable ["enemy_convoy_apc", true, true];
 
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "Civ Convoy 4 Spawn"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
+          // remove this element from zeus
+          private _index = [zen_custom_modules_list, "enemy_convoy_apc"] call BIS_fnc_findNestedElement;
+          zen_custom_modules_list deleteAt _index;
+          [] call zen_common_fnc_reloadDisplay;
+          
+     }] call zen_custom_modules_fnc_register;
 
+} forEach [
+     "enemy_convoy_motorized", 
+     "enemy_convoy_tanks", 
+     "enemy_convoy_apc", 
+     "enemy_convoy_trucks_1"
+];
 
 
 ["Guardian Angel - Mission Progress", "RadioMessage START - First task", {
