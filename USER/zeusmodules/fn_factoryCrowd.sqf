@@ -1,5 +1,30 @@
 params ["_unit"];
 
+if (hasInterface) then {
+	private _animation = "Acts_CivilListening_1";
+	_unit switchMove _animation;
+
+	_unit addEventHandler ["AnimDone", {
+		params ["_unit"];
+
+		if (!alive _unit) then { _unit removeEventHandler ["AnimDone", _thisEventhandler]; };
+		
+		private _animation = _unit getVariable ["animationLoop", "Acts_CivilListening_1"];
+		if (_animation != "") then { _unit switchmove _animation; };
+	}];
+};
+
+if (!isServer) exitWith {};
+
+private _animation = selectRandom [
+				"Acts_Explaining_EW_Idle01",
+				"Acts_Explaining_EW_Idle02",
+				"Acts_Explaining_EW_Idle03",
+				"Acts_Gallery_Visitor_01",
+				"","","",""
+			];
+_unit setVariable ["animationLoop", _animation, true];
+
 private _group = group _unit;
 private _units = units _group;
 
