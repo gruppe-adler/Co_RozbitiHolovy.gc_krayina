@@ -20,7 +20,6 @@
               _x setSkill ["commanding", 1];
               _x setSkill ["general", 1];
 
-              _x addGoggles "fsob_Beard01_Dark";
           } forEach units _group;
 
           ["GRAD_missionControl_setServerAsOwner", [_group]] call CBA_fnc_serverEvent;
@@ -113,86 +112,37 @@
 ];
 
 
-["Guardian Angel - Mission Progress", "RadioMessage START - First task", {
+["Guardian Angel - Mission Progress", "Speech Fabrik", {
      params ["_position", "_object"];
      
-     [[-1], "USER\intel\radioMessage.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "RadioMessage START - First task"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Mission Progress", "RadioMessage 0 - German Convoy", {
-     params ["_position", "_object"];
-     
-     [[0], "USER\intel\radioMessage.sqf"] remoteExec ["BIS_fnc_execVM"];
-     missionNameSpace setVariable ["grad_blufor_convoy", true, true];
-
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "RadioMessage 0 - German Convoy"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Mission Progress", "RadioMessage 1 - Convoy ambushed", {
-     params ["_position", "_object"];
-     
-     [[1], "USER\intel\radioMessage.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "RadioMessage 1 - Convoy ambushed"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Mission Progress", "RadioMessage 2 - Arty counter", {
-     params ["_position", "_object"];
-     
-     [[4], "USER\intel\radioMessage.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "RadioMessage 2 - Arty counter"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Mission Progress", "RadioMessage 3 - Hostage 1 coordinates", {
-     params ["_position", "_object"];
-     
-     [[2], "USER\intel\radioMessage.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "RadioMessage 3 - Hostage 1 coordinates"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Mission Progress", "RadioMessage 4 - Hostage 2 Task", {
-     params ["_position", "_object"];
-     
-     [[5], "USER\intel\radioMessage.sqf"] remoteExec ["BIS_fnc_execVM"];
-
-     // remove this element from zeus
-     private _index = [zen_custom_modules_list, "RadioMessage 4 - Hostage 2 Task"] call BIS_fnc_findNestedElement;
-     zen_custom_modules_list deleteAt _index;
-     [] call zen_common_fnc_reloadDisplay;
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Mission Progress", "RadioMessage 5 - Mission accomplished", {
-     params ["_position", "_object"];
-     
-     [[3], "USER\intel\radioMessage.sqf"] remoteExec ["BIS_fnc_execVM"];
+     [[], "USER\scripts\speechFabrik.sqf"] remoteExec ["BIS_fnc_execVM"];
 
       // remove this element from zeus
-     private _index = [zen_custom_modules_list, "RadioMessage 5 - Mission accomplished"] call BIS_fnc_findNestedElement;
+     private _index = [zen_custom_modules_list, "Speech Fabrik"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
+
+["Guardian Angel - Mission Progress", "Speech Kita", {
+     params ["_position", "_object"];
+     
+     [[], "USER\scripts\speechKita.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+      // remove this element from zeus
+     private _index = [zen_custom_modules_list, "Speech Kita"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
+
+["Guardian Angel - Mission Progress", "Speech Fabrik", {
+     params ["_position", "_object"];
+     
+     [[], "USER\scripts\speechFabrik.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+      // remove this element from zeus
+     private _index = [zen_custom_modules_list, "Speech Fabrik"] call BIS_fnc_findNestedElement;
      zen_custom_modules_list deleteAt _index;
      [] call zen_common_fnc_reloadDisplay;
      
@@ -336,16 +286,6 @@
       {
         _x addCuratorEditableObjects [[_radio], false];
       } forEach allCurators;
-
-    }] call zen_custom_modules_fnc_register;
-
-
-["Guardian Angel - Ambient", "Suicide Car Spawn",
-    {
-      params ["_position", "_object"];
-      _position = ASLToAGL _position;
-
-      [_position] remoteExec ["grad_ambient_fnc_suicideCar", 2];
 
     }] call zen_custom_modules_fnc_register;
 

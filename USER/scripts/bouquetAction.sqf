@@ -65,3 +65,23 @@ _unit addAction
 ];
 
 
+
+_unit addAction
+[
+	"Stop speech",	// title
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"]; // script
+
+		_caller setVariable ["speech_aborted", true, true];
+	},
+	nil,		// arguments
+	1.5,		// priority
+	true,		// showWindow
+	true,		// hideOnUse
+	"",			// shortcut
+	"_this == _target && (_target getVariable ['speech_running', false])",		// condition
+	50,			// radius
+	false,		// unconscious
+	"",			// selection
+	""			// memoryPoint
+];
