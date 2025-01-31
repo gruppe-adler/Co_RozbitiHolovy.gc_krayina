@@ -54,65 +54,69 @@
   } forEach allCurators;
 };
 
-{
-     private _identifier = _x;
-     ["Rozbiti Holovy - Convoy", _identifier, {
-          params ["_position", "_object"];
-          
-          missionNameSpace setVariable ["enemy_convoy_motorized", true, true];
 
-          // remove this element from zeus
-          private _index = [zen_custom_modules_list, "Motorized"] call BIS_fnc_findNestedElement;
-          zen_custom_modules_list deleteAt _index;
-          [] call zen_common_fnc_reloadDisplay;
-          
-     }] call zen_custom_modules_fnc_register;
+["Rozbiti Holovy - Convoy", "enemy_convoy_motorized", {
+     params ["_position", "_object"];
+     
+     missionNameSpace setVariable ["enemy_convoy_motorized", true, true];
 
-     ["Rozbiti Holovy - Convoy", _identifier, {
-          params ["_position", "_object"];
-          
-          missionNameSpace setVariable ["enemy_convoy_trucks_1", true, true];
+     // remove this element from zeus
+     private _index = [zen_custom_modules_list, "Motorized"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
 
-          // remove this element from zeus
-          private _index = [zen_custom_modules_list, "enemy_convoy_trucks_1"] call BIS_fnc_findNestedElement;
-          zen_custom_modules_list deleteAt _index;
-          [] call zen_common_fnc_reloadDisplay;
-          
-     }] call zen_custom_modules_fnc_register;
+["Rozbiti Holovy - Convoy", "enemy_convoy_tanks", {
+     params ["_position", "_object"];
+     
+     missionNameSpace setVariable ["enemy_convoy_tanks", true, true];
 
-     ["Rozbiti Holovy - Convoy", _identifier, {
-          params ["_position", "_object"];
-          
-          missionNameSpace setVariable ["enemy_convoy_tanks", true, true];
+     // remove this element from zeus
+     private _index = [zen_custom_modules_list, "enemy_convoy_tanks"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
 
-          // remove this element from zeus
-          private _index = [zen_custom_modules_list, "enemy_convoy_tanks"] call BIS_fnc_findNestedElement;
-          zen_custom_modules_list deleteAt _index;
-          [] call zen_common_fnc_reloadDisplay;
-          
-     }] call zen_custom_modules_fnc_register;
+["Rozbiti Holovy - Convoy", "enemy_convoy_apc", {
+     params ["_position", "_object"];
+     
+     missionNameSpace setVariable ["enemy_convoy_apc", true, true];
 
-     ["Rozbiti Holovy - Convoy", _identifier, {
-          params ["_position", "_object"];
-          
-          missionNameSpace setVariable ["enemy_convoy_apc", true, true];
+     // remove this element from zeus
+     private _index = [zen_custom_modules_list, "enemy_convoy_apc"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
 
-          // remove this element from zeus
-          private _index = [zen_custom_modules_list, "enemy_convoy_apc"] call BIS_fnc_findNestedElement;
-          zen_custom_modules_list deleteAt _index;
-          [] call zen_common_fnc_reloadDisplay;
-          
-     }] call zen_custom_modules_fnc_register;
+["Rozbiti Holovy - Convoy", "enemy_convoy_trucks_1", {
+     params ["_position", "_object"];
+     
+     missionNameSpace setVariable ["enemy_convoy_trucks_1", true, true];
 
-} forEach [
-     "enemy_convoy_motorized", 
-     "enemy_convoy_tanks", 
-     "enemy_convoy_apc", 
-     "enemy_convoy_trucks_1"
-];
+     // remove this element from zeus
+     private _index = [zen_custom_modules_list, "enemy_convoy_trucks_1"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
+
+["Rozbiti Holovy - Convoy", "convoy_zementska", {
+     params ["_position", "_object"];
+     
+     missionNameSpace setVariable ["convoy_zementska", true, true];
+
+     // remove this element from zeus
+     private _index = [zen_custom_modules_list, "convoy_zementska"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
 
 
-["Guardian Angel - Mission Progress", "Speech Fabrik", {
+["Rozbiti Holovy - Mission Progress", "Speech Fabrik", {
      params ["_position", "_object"];
      
      [[], "USER\scripts\speechFabrik.sqf"] remoteExec ["BIS_fnc_execVM"];
@@ -124,7 +128,7 @@
      
 }] call zen_custom_modules_fnc_register;
 
-["Guardian Angel - Mission Progress", "Speech Kita", {
+["Rozbiti Holovy - Mission Progress", "Speech Kita", {
      params ["_position", "_object"];
      
      [[], "USER\scripts\speechKita.sqf"] remoteExec ["BIS_fnc_execVM"];
@@ -136,7 +140,7 @@
      
 }] call zen_custom_modules_fnc_register;
 
-["Guardian Angel - Mission Progress", "Speech Fabrik", {
+["Rozbiti Holovy - Mission Progress", "Speech Fabrik", {
      params ["_position", "_object"];
      
      [[], "USER\scripts\speechFabrik.sqf"] remoteExec ["BIS_fnc_execVM"];
@@ -149,87 +153,10 @@
 }] call zen_custom_modules_fnc_register;
 
 
-["Guardian Angel - Arty", "ArtyFire on this position", {
-          params ["_modulePosition", "_vehicle"];
-
-          [_modulePosition] remoteExec ["grad_zeusmodules_fnc_artyFire", 2];
-     }
-] call zen_custom_modules_fnc_register;
 
 
 
-
-["Guardian Angel - Mission Progress", "Spawn Blufor Victim", {
-     params ["_position", "_object"];
-     
-     private _agl = ASLtoAGL _position;
-     [_agl] remoteExec ["grad_zeusmodules_fnc_spawnVictim", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-
-["Guardian Angel - Enemies Cloaked", "Reinforcements Squad", {
-     params ["_position", "_object"];
-     
-     ["squad", true, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Enemies Open", "Reinforcements Squad", {
-     params ["_position", "_object"];
-     
-     ["squad", false, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-
-["Guardian Angel - Enemies Cloaked", "Reinforcements Fireteam", {
-     params ["_position", "_object"];
-     
-     ["fireteam", true, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Enemies Open", "Reinforcements Fireteam", {
-     params ["_position", "_object"];
-     
-     ["fireteam", false, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-
-["Guardian Angel - Enemies Cloaked", "Reinforcements specialteam", {
-     params ["_position", "_object"];
-     
-     ["specialteam", true, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Enemies Open", "Reinforcements specialteam", {
-     params ["_position", "_object"];
-     
-     ["specialteam", false, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-
-["Guardian Angel - Enemies Cloaked", "Reinforcements heavy", {
-     params ["_position", "_object"];
-     
-     ["heavy", true, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-["Guardian Angel - Enemies Open", "Reinforcements heavy", {
-     params ["_position", "_object"];
-     
-     ["heavy", false, ASLtoAGL _position] remoteExec ["grad_zeusmodules_fnc_reinforcements", 2];
-     
-}] call zen_custom_modules_fnc_register;
-
-
-
-["Guardian Angel - GRAD Leavenotes", "Spawn Note", {
+["Rozbiti Holovy - GRAD Leavenotes", "Spawn Note", {
           params ["_modulePosition"]; 
           private _position = ASLtoAGL _modulePosition;
 
@@ -244,64 +171,6 @@
 
 
 
-["Guardian Angel - Traffic", "Spawn traffic", {
-          params ["_modulePosition", "_vehicle"];
-
-          "Traffic spawned" call CBA_fnc_notify;
-          [_vehicle] remoteExec ["grad_zeusmodules_fnc_createTraffic", 2];
-     }
-] call zen_custom_modules_fnc_register;
-
-
-["Guardian Angel - IED Workshop", "Add hidden IED to vehicle", {
-          params ["_modulePosition", "_vehicle"];
-
-          if (_vehicle iskindof "LandVehicle") then {
-               "IED added" call CBA_fnc_notify;
-               [_vehicle] remoteExec ["grad_zeusmodules_fnc_addHiddenIED", 2];
-          } else {
-               "Not a vehicle" call CBA_fnc_notify;
-          };              
-     }
-] call zen_custom_modules_fnc_register;
-
-
-
-
-
-["Guardian Angel - Ambient", "Music Radio",
-    {
-      // Get all the passed parameters
-      params ["_position", "_object"];
-      _position = ASLToAGL _position;
-
-      private _radio = (selectRandom ["land_gm_euro_furniture_radio_01", "jbad_radio_b", "Land_FMradio_F"]) createVehicle [0,0,0];
-      _radio setPos _position;
-      _radio setDir (random 360);
-
-      private _music = (selectRandom ["music1", "music2", "arabicsong1", "arabicsong2"]);
-      private _source = createSoundSource [_music, _position, [], 0];
-      [_source, _music, _radio, false] call grad_ambient_fnc_soundSourceHelper;
-      
-      {
-        _x addCuratorEditableObjects [[_radio], false];
-      } forEach allCurators;
-
-    }] call zen_custom_modules_fnc_register;
-
-
-
-["Guardian Angel - Ambient", "Shoot Flare",
-    {
-      params ["_position", "_object"];
-      _position = ASLToAGL _position;
-
-       _position set [2, 250]; private _ammo = "rhsusf_40mm_clusterflare_red" createVehicle _position; 
-      _ammo setVelocity [random 1,random 1,1];
-
-    }] call zen_custom_modules_fnc_register;
-
-    
 
     
 

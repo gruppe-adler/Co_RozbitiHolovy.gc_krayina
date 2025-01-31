@@ -50,4 +50,4 @@ if (!isServer) exitWith {};
 
 	}, [_objects1, _groups1, _identifier]] call CBA_fnc_waitUntilAndExecute;
 
-} forEach ["enemy_convoy_motorized", "enemy_convoy_tanks", "enemy_convoy_apc", "enemy_convoy_trucks_1"];
+} forEach ["convoy_zementska", "enemy_convoy_motorized", "enemy_convoy_tanks", "enemy_convoy_apc", "enemy_convoy_trucks_1"];

@@ -5,3 +5,4 @@
 
 #include "zeusmodules\cfgFunctions.hpp"
 #include "utils\cfgFunctions.hpp"
+#include "autoinits\cfgFunctions.hpp"
