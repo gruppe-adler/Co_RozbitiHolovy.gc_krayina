@@ -6,7 +6,6 @@ params ["_vehicle"];
 	if (isServer) then {
 		_vehicle setObjectTextureGlobal [0, "#(rgb,8,8,3)color(0,0,0,1)"];
 		_vehicle setObjectTextureGlobal [1, "#(rgb,8,8,3)color(0,0,0,1)"];
-		[_vehicle, 'gm_beacons_blu', true] call gm_core_vehicles_fnc_beaconSwitch;
 	};
 
 	_vehicle addAction
@@ -22,7 +21,7 @@ params ["_vehicle"];
 		true,		// showWindow
 		true,		// hideOnUse
 		"",			// shortcut
-		"_target animationSourcePhase 'door_1_2_source' == 0",
+		"_target animationSourcePhase 'door_2_1_source' == 0",
 		3,			// radius
 		false,		// unconscious
 		"",			// selection

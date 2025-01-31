@@ -3,5 +3,6 @@ class grad_autoinit {
         file = USER\autoinits;
 
         class mercedesDoorAction { postInit = 1; };
+		class zementskaActions { postInit = 1; };
     };
 };
