@@ -153,6 +153,29 @@
 }] call zen_custom_modules_fnc_register;
 
 
+["Rozbiti Holovy - Mission Progress", "President Landing at LZ", {
+     params ["_position", "_object"];
+     
+     [] call grad_utils_fnc_startPresidentEvac;
+
+      // remove this element from zeus
+     private _index = [zen_custom_modules_list, "President Landing at LZ"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
+
+["Rozbiti Holovy - Mission Progress", "President Liftoff", {
+     params ["_position", "_object"];
+     
+     missionNamespace setVariable ["GRAD_takeOffPresident", true, true];
+
+      // remove this element from zeus
+     private _index = [zen_custom_modules_list, "President Liftoff"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
 
 
 

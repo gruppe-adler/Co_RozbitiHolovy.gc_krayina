@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10876.241,154.99124,5848.814};
-		dir[]={-0.59935564,-0.60866702,0.51990861};
-		up[]={-0.45978722,0.7934218,0.39884096};
-		aside[]={0.6552698,-3.8940925e-08,0.75540066};
+		pos[]={9323.9902,171.90604,5837.2427};
+		dir[]={-0.72831869,-0.6260733,-0.27855733};
+		up[]={-0.58476788,0.77976102,-0.22365379};
+		aside[]={-0.35723191,1.2211967e-07,0.93402165};
 	};
 };
 binarizationWanted=0;
@@ -19870,7 +19870,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="if (isServer) then { this disableAI ""PATH""; };";
+						init="if (isServer) then { this disableAI ""PATH""; }; [this] call grad_utils_fnc_addHomingShots;";
 					};
 					id=2540;
 					type="rhs_vdv_at";
