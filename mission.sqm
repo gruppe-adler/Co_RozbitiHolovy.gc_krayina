@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2546;
+		nextID=2547;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10887.372,159.58342,5853.0479};
-		dir[]={-0.89705724,-0.42597416,0.11761959};
-		up[]={-0.42235911,0.90473533,0.055378523};
-		aside[]={0.13000441,0,0.99151343};
+		pos[]={10889.468,163.86465,5852.7676};
+		dir[]={-0.90972388,-0.40489998,0.092039116};
+		up[]={-0.40285173,0.9143585,0.040757384};
+		aside[]={0.10065947,1.0244548e-08,0.9949277};
 	};
 };
 binarizationWanted=0;
@@ -632,7 +632,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -9624,10 +9624,10 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={7722.9243,151.12918,6534.3115};
-				angles[]={0.026818516,0,0.018357944};
+				position[]={8928.2031,156.02579,6336.5288};
+				angles[]={0.004200357,0,6.2748418};
 			};
-			areaSize[]={2000,0,2000};
+			areaSize[]={2500,0,2000};
 			areaIsRectangle=1;
 			flags=1;
 			id=2066;
@@ -19037,8 +19037,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8176.6689,157.3593,6116.9321};
-						angles[]={0,2.9667842,0};
+						position[]={8173.5112,157.18568,6114.6001};
+						angles[]={0,0.96752697,-0};
 					};
 					side="Civilian";
 					flags=7;
@@ -19069,14 +19069,12 @@ class Mission
 					};
 					id=2424;
 					type="C_journalist_F";
-					atlOffset=3.0517578e-05;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=2423;
-			atlOffset=3.0517578e-05;
 		};
 		class Item325
 		{
@@ -19677,19 +19675,21 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8157.042,230.29498,4920.7271};
+				position[]={8157.042,230.29469,4920.7275};
 				angles[]={0,0.99136442,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="if (isServer) then { west createVehicleCrew this; this setCaptive true; };";
+				init="if (isServer) then { west createVehicleCrew this; this setCaptive true; [this] execvm ""USER\scripts\droneFuel.sqf""; };";
+				name="ldf_uav";
+				textures="standard";
 				reportRemoteTargets=1;
 				reportOwnPosition=1;
 			};
 			id=2483;
 			type="rhs_pchela1t_vvsc";
-			atlOffset=69.408249;
+			atlOffset=69.40799;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19701,11 +19701,24 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="AviaRed";
+							value="Handpaint";
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="rhs_decalNumber";
+					expression="if( _value >= 0)then{if( _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cRHSAIRPchelaNumberPlaces}else{[_this, [['Number', cRHSAIRPchelaNumberPlaces, _this getVariable ['rhs_decalNumber_type','AviaYellow'], _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=137;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item340
@@ -19733,7 +19746,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10862.916,150.96544,5856.3364};
-						angles[]={0,4.7877874,0};
+						angles[]={-0,4.7877874,0};
 					};
 					side="Civilian";
 					flags=6;
@@ -19919,7 +19932,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10871.495,150.96544,5853.2437};
+								position[]={10872.136,150.96544,5851.7393};
 								angles[]={0,6.2436533,0};
 							};
 							side="Civilian";
@@ -20005,8 +20018,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10871.503,152.06091,5855.4961};
-						angles[]={0,4.7877874,0};
+						position[]={10871.218,152.06091,5853.8691};
+						angles[]={-0,4.7877874,0};
 					};
 					side="Civilian";
 					flags=6;
@@ -20337,8 +20350,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10862.916,152.06091,5856.2871};
-						angles[]={0,4.7877874,0};
+						position[]={10862.631,152.06091,5854.6602};
+						angles[]={-0,4.7877874,0};
 					};
 					side="Civilian";
 					flags=6;
@@ -20668,8 +20681,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10878.905,152.04745,5854.9312};
-						angles[]={0,4.7877874,6.2823472};
+						position[]={10878.62,152.04773,5853.3042};
+						angles[]={-0,4.7877874,6.2823396};
 					};
 					side="Civilian";
 					flags=6;
@@ -21008,7 +21021,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={10878.903,150.95212,5854.9824};
-								angles[]={0,4.7877874,6.2823472};
+								angles[]={-0,4.7877874,6.2823396};
 							};
 							side="Civilian";
 							flags=6;
@@ -21030,7 +21043,7 @@ class Mission
 							};
 							id=2515;
 							type="C_man_1";
-							atlOffset=0.00015258789;
+							atlOffset=1.5258789e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -21119,7 +21132,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={10871.503,150.96544,5855.5459};
-								angles[]={0,4.7877874,0};
+								angles[]={-0,4.7877874,0};
 							};
 							side="Civilian";
 							flags=6;
@@ -21219,22 +21232,21 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10873.18,153.47878,5856.7002};
-						angles[]={0,0,5.9306288};
+						position[]={8187.1362,166.12135,6118.6621};
+						angles[]={5.7012405,0,5.9306288};
 					};
 					side="Empty";
 					flags=1;
 					class Attributes
 					{
-						init="if (isServer) then { [this, car_zementska] call BIS_fnc_attachToRelative; this setFlagTexture ""\UK3CB_Factions\addons\UK3CB_Factions_LDF\Flag\liv_flag_co.paa""; };";
 					};
-					id=2541;
+					id=2546;
 					type="rhs_Flag_Insurgents";
-					atlOffset=0.98199463;
+					atlOffset=3.6142883;
 				};
 			};
 			id=2544;
-			atlOffset=0.4901886;
+			atlOffset=23.534225;
 		};
 	};
 	class Connections
