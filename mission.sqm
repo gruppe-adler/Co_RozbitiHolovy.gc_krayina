@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10889.468,163.86465,5852.7676};
-		dir[]={-0.90972388,-0.40489998,0.092039116};
-		up[]={-0.40285173,0.9143585,0.040757384};
-		aside[]={0.10065947,1.0244548e-08,0.9949277};
+		pos[]={10888.403,158.69627,5853.5303};
+		dir[]={-0.91696244,-0.39849657,0.019508803};
+		up[]={-0.39840645,0.91716975,0.0084762825};
+		aside[]={0.021270653,4.6566129e-10,0.9997738};
 	};
 };
 binarizationWanted=0;
@@ -632,7 +632,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -19816,7 +19816,7 @@ class Mission
 			{
 				behaviour="CARELESS";
 				speedMode="LIMITED";
-				dynamicSimulation=1;
+				formation="FILE";
 			};
 			class CrewLinks
 			{
@@ -19932,7 +19932,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10872.136,150.96544,5851.7393};
+								position[]={10872.136,150.96544,5851.7388};
 								angles[]={0,6.2436533,0};
 							};
 							side="Civilian";
@@ -20009,7 +20009,6 @@ class Mission
 					{
 						behaviour="CARELESS";
 						speedMode="LIMITED";
-						dynamicSimulation=1;
 					};
 					id=1682;
 				};
@@ -20682,7 +20681,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10878.62,152.04773,5853.3042};
-						angles[]={-0,4.7877874,6.2823396};
+						angles[]={0,4.7877874,6.2823472};
 					};
 					side="Civilian";
 					flags=6;
@@ -21021,13 +21020,12 @@ class Mission
 							class PositionInfo
 							{
 								position[]={10878.903,150.95212,5854.9824};
-								angles[]={-0,4.7877874,6.2823396};
+								angles[]={0,4.7877874,6.2823472};
 							};
 							side="Civilian";
 							flags=6;
 							class Attributes
 							{
-								name="Grad_AmbushTargetD";
 								class Inventory
 								{
 									class uniform
@@ -21043,7 +21041,7 @@ class Mission
 							};
 							id=2515;
 							type="C_man_1";
-							atlOffset=1.5258789e-05;
+							atlOffset=0.00015258789;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -21093,7 +21091,6 @@ class Mission
 					{
 						behaviour="CARELESS";
 						speedMode="LIMITED";
-						dynamicSimulation=1;
 					};
 					class CrewLinks
 					{
@@ -21202,7 +21199,7 @@ class Mission
 					{
 						behaviour="CARELESS";
 						speedMode="LIMITED";
-						dynamicSimulation=1;
+						formation="FILE";
 					};
 					class CrewLinks
 					{
@@ -21246,7 +21243,7 @@ class Mission
 				};
 			};
 			id=2544;
-			atlOffset=23.534225;
+			atlOffset=-10.567551;
 		};
 	};
 	class Connections
