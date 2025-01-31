@@ -8,22 +8,22 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2518;
+		nextID=2534;
 	};
 	class MarkerIDProvider
 	{
-		nextID=56;
+		nextID=57;
 	};
 	class LayerIndexProvider
 	{
-		nextID=394;
+		nextID=406;
 	};
 	class Camera
 	{
-		pos[]={10877.575,155.50121,5851.4238};
-		dir[]={-0.84121627,-0.52544355,0.12753238};
-		up[]={-0.51950729,0.85082835,0.078759775};
-		aside[]={0.14989197,-7.4505806e-09,0.98870242};
+		pos[]={11036.63,160.02148,5749.8564};
+		dir[]={-0.95857257,-0.25920472,0.11811665};
+		up[]={-0.25725904,0.9658224,0.031699818};
+		aside[]={0.12229645,0,0.99249363};
 	};
 };
 binarizationWanted=0;
@@ -4778,7 +4778,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=349;
+		items=350;
 		class Item0
 		{
 			dataType="Layer";
@@ -19804,7 +19804,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10871.503,152.06091,5855.4961};
-				angles[]={-0,4.7877884,0};
+				angles[]={0,4.7877884,0};
 			};
 			side="Civilian";
 			flags=6;
@@ -19991,7 +19991,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10862.916,152.06091,5856.2866};
-				angles[]={-0,4.7877884,0};
+				angles[]={0,4.7877884,0};
 			};
 			side="Civilian";
 			flags=6;
@@ -20178,7 +20178,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10878.905,152.04759,5854.9312};
-				angles[]={-0,4.7877865,6.2823396};
+				angles[]={0,4.7877865,6.2823396};
 			};
 			side="Civilian";
 			flags=6;
@@ -20373,7 +20373,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10862.916,150.96544,5856.3364};
-						angles[]={-0,4.8931351,0};
+						angles[]={0,4.8931351,0};
 					};
 					side="Civilian";
 					flags=6;
@@ -20481,7 +20481,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10871.503,150.96544,5855.5459};
-						angles[]={-0,4.8931351,0};
+						angles[]={0,4.8931351,0};
 					};
 					side="Civilian";
 					flags=6;
@@ -20589,7 +20589,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10878.903,150.95212,5854.9824};
-						angles[]={-0,4.8931351,6.2823396};
+						angles[]={0,4.8931351,6.2823396};
 					};
 					side="Civilian";
 					flags=6;
@@ -20713,6 +20713,16 @@ class Mission
 			{
 			};
 			id=2516;
+		};
+		class Item349
+		{
+			dataType="Marker";
+			position[]={11023.264,151.9825,5749.8154};
+			name="marker_56";
+			text="LZ Vasylivka";
+			type="hd_pickup";
+			colorName="ColorWEST";
+			id=2533;
 		};
 	};
 	class Connections
