@@ -179,6 +179,31 @@
 
 
 
+["Rozbiti Holovy - Helicopters", "Mi8 Duo", {
+     params ["_position", "_object"];
+     
+    [] execVM "USER\scripts\mi8_duo.sqf";
+     
+}] call zen_custom_modules_fnc_register;
+
+["Rozbiti Holovy - Helicopters", "Mi8 Triple", {
+     params ["_position", "_object"];
+     
+    [] execVM "USER\scripts\mi8_triple.sqf";
+     
+}] call zen_custom_modules_fnc_register;
+
+["Rozbiti Holovy - Helicopters", "Mi28 Duo", {
+     params ["_position", "_object"];
+     
+    [] execVM "USER\scripts\mi28_duo.sqf";
+     
+}] call zen_custom_modules_fnc_register;
+
+
+
+
+
 ["Rozbiti Holovy - GRAD Leavenotes", "Spawn Note", {
           params ["_modulePosition"]; 
           private _position = ASLtoAGL _modulePosition;
