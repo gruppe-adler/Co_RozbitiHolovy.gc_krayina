@@ -32,7 +32,6 @@ params ["_target", "_projectile"];
 		// 	_velP = _interpolated vectorMultiply _missileSpeed;
 		// };
 
-		systemChat str _velP;
 		_projectile setVelocity _velP;
 		_projectile setVectorDir _flightVec;
 		_projectile setVectorUp (_flightVec vectorCrossProduct [_flightVec # 1, _flightVec # 0, 0]);

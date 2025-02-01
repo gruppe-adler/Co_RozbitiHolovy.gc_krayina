@@ -115,6 +115,20 @@
      
 }] call zen_custom_modules_fnc_register;
 
+["Rozbiti Holovy - Mission Progress", "Start Ambush Group", {
+     params ["_position", "_object"];
+     
+     {
+          [_x, "ALL"] remoteExec ["enableAI", _x];
+          [_x, "AUTO"] remoteExec ["setUnitPos", _x];
+     } forEach (units grad_ambushGroup);
+
+      // remove this element from zeus
+     private _index = [zen_custom_modules_list, "Start Ambush Group"] call BIS_fnc_findNestedElement;
+     zen_custom_modules_list deleteAt _index;
+     [] call zen_common_fnc_reloadDisplay;
+     
+}] call zen_custom_modules_fnc_register;
 
 ["Rozbiti Holovy - Mission Progress", "Speech Fabrik", {
      params ["_position", "_object"];
