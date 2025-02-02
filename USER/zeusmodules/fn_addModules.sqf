@@ -86,7 +86,7 @@
 
     [
         ["Iron, hier Overlord. Hiermit ergeht folgender Befehl im Namen von Brigadegeneral Kovalchuk: Ein feindlicher Konvoi aus mechanisierten und motorisierten Kräften befindet sich auf der Zufahrt nach Mar'ivka und nutzt die Hauptstraße aus nordwestlicher Richtung in Richtung Süden. Ihr Auftrag lautet, den vorderen Teil des feindlichen Konvois anzusprengen und die gegnerischen Kräfte bis Mar'ivka so lange wie möglich zu verzögern. Zeitgleich binden unsere eigenen Verbände Feindangriffe aus Westen und Südwesten. Overlord, Ende.", 
-        "command_briefing", 
+        "command_defendcity", 
         34,
         true
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];

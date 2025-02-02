@@ -59,7 +59,7 @@ _ctrlImage ctrlSetPosition [0, safeZoneH - BOX_H, BOX_W*2, BOX_H];
 if (_isCommand) then {
 	_ctrlImage ctrlSetText "USER\rscMessage\command.paa";	
 } else {
-	_ctrlImage ctrlSetText "USER\rscMessage\privatesecurity.paa";
+	_ctrlImage ctrlSetText "USER\rscMessage\bodyguards.paa";
 };
 _ctrlImage ctrlCommit 0;
 
