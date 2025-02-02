@@ -1,5 +1,5 @@
 
-private _sound = fabrikspeaker say3D ["speech_fabrik", 200];
+private _sound = fabrikspeaker say3D ["speech_fabrik", 500];
 private _sound2 = zementska say3D ["speech_fabrik_person", 100];
 
 zementska setRandomLip true;

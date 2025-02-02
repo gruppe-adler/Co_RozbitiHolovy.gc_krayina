@@ -1,6 +1,6 @@
 if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
 
-private _heliArr = [[random 300, random 300, 200 + random 100], 0, "UK3CB_C_Bell412_Luxury", west] call BIS_fnc_spawnVehicle;
+private _heliArr = [[random 300, random 300, 200 + random 100], 0, "UK3CB_C_Bell412_Luxury", civilian] call BIS_fnc_spawnVehicle;
 _heliArr params ["_heli", "_heliCrewObjects", "_heliCrew"];
 _heli allowDamage false;
 _heliCrew setBehaviour "CARELESS";

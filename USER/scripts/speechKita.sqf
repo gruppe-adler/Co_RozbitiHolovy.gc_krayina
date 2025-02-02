@@ -1,5 +1,5 @@
 
-private _sound = zementska say3D ["speech_kita", 200];
+private _sound = zementska say3D ["speech_kita", 300];
 
 zementska setRandomLip true;
 zementska setvariable ["speech_aborted", false];

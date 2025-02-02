@@ -1,4 +1,4 @@
-if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
+// if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
 
 params ["_unit"];
 

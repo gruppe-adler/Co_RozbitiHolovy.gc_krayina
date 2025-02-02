@@ -43,6 +43,8 @@ doStop _unit;
 			if (isNull _unit) exitWith {
 				[_handle] call CBA_fnc_removePerFrameHandler;
 			};
+
+			if ((_unit distance2D zementska) > 70) exitWith {};
 			
 			_unit dofollow _unit;
 			_unit setformdir (_unit getDir zementska);
