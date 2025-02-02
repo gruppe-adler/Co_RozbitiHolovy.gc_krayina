@@ -3,8 +3,12 @@ params ["_vehicle"];
 private _group = createGroup east;
 
 {
-	private _unit = _group createUnit [_x, [0,0,0], [], 0, "NONE"];
-	_unit moveInCargo _vehicle;
+	// prevent spawn lag
+	[{
+		params ["_type", "_group", "_vehicle"];
+		private _unit = _group createUnit [_type, [0,0,0], [], 0, "NONE"];
+		_unit moveInCargo _vehicle;
+	}, [_x, _group, _vehicle], random 20] call CBA_fnc_waitAndExecute;
 } forEach [
 	"rhs_msv_emr_sergeant",
 	"rhs_msv_emr_efreitor",

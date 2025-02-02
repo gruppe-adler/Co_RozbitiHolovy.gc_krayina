@@ -54,6 +54,45 @@
   } forEach allCurators;
 };
 
+["Rozbiti Holovy - Radio Calls", "1 - Initial Briefing",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["Iron, hier Overlord. Lage: Präsident Zementska rückt im Konvoi an. Absetzpunkt: Sammelpunkt Alpha. Von dort bewegt er sich zu Fuß durch das Stadtgebiet. Auftrag: Sicherung des VIP, lückenlose Deckung und Geleit bis zu Exfiltrationspunkt Echo. Feindlage: Mögliche feindliche Killerkommandos im Einsatzgebiet. Aufgrund Zivilbevölkerung Feuerdisziplin wahren. Eigene Kräfte: Einzelne Patrouillen im Stadtgebiet und an den Ausfallstraßen. Overlord, Ende.", 
+        "command_briefing", 
+        28,
+        true
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+["Rozbiti Holovy - Radio Calls", "2 - Bodyguards",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["Iron, hier Steel. Wir brechen mit Zementska durch nach Vasylivka. Evac befindet sich im Anflug. Ende.", 
+        "bodyguards", 
+        6,
+        false
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
+["Rozbiti Holovy - Radio Calls", "3 - Defend City",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["Iron, hier Overlord. Hiermit ergeht folgender Befehl im Namen von Brigadegeneral Kovalchuk: Ein feindlicher Konvoi aus mechanisierten und motorisierten Kräften befindet sich auf der Zufahrt nach Mar'ivka und nutzt die Hauptstraße aus nordwestlicher Richtung in Richtung Süden. Ihr Auftrag lautet, den vorderen Teil des feindlichen Konvois anzusprengen und die gegnerischen Kräfte bis Mar'ivka so lange wie möglich zu verzögern. Zeitgleich binden unsere eigenen Verbände Feindangriffe aus Westen und Südwesten. Overlord, Ende.", 
+        "command_briefing", 
+        34,
+        true
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
 
 ["Rozbiti Holovy - Convoy", "enemy_convoy_motorized", {
      params ["_position", "_object"];
