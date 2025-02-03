@@ -9,5 +9,6 @@ _unit addEventHandler ["Fired", {
 
 	if (isNull _target) exitWith {};
 
-	[_target, _projectile] remoteExec ["GRAD_UTILS_fnc_guideMissile", _projectile];
+	// [_target, _projectile] remoteExec ["GRAD_UTILS_fnc_guideMissile", _projectile];
+	[_target, _projectile] call GRAD_UTILS_fnc_guideMissile;
 }];
