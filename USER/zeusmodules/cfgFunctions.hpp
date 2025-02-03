@@ -23,5 +23,6 @@ class grad_zeusmodules {
         class fillAmmoBox;
         class artyFire;
         class factoryCrowd;
+	class fillBoxWithAmmo;
     };
 };

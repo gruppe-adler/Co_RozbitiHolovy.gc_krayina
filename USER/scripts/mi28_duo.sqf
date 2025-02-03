@@ -1,4 +1,4 @@
-private _mi28_1 = "rhs_mi28_1n_vvs" createVehicle [0,0,300];
+private _mi28_1 = "rhs_mi28n_vvs" createVehicle [0,0,300];
 createVehicleCrew _mi28_1;
 _mi28_1 engineOn true;
 [_mi28_1, call grad_autoinit_fnc_flightpath_mi28_1] spawn BIS_fnc_unitPlay;

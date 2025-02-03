@@ -20,6 +20,13 @@ class command_defendcity
     titles[] = {0, ""};
 };
 
+class command_rtb
+{
+	name = "command_rtb";
+    sound[] = {"USER\sounds\command_rtb.ogg", 1, 1, 200};
+    titles[] = {0, ""};
+};
+
 class bodyguards
 {
     name = "bodyguards";

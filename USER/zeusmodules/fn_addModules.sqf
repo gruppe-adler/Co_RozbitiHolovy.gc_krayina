@@ -59,9 +59,9 @@
   params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
     [
-        ["Iron, hier Overlord. Lage: Präsident Zementska rückt im Konvoi an. Absetzpunkt: Sammelpunkt Alpha. Von dort bewegt er sich zu Fuß durch das Stadtgebiet. Auftrag: Sicherung des VIP, lückenlose Deckung und Geleit bis zu Exfiltrationspunkt Echo. Feindlage: Mögliche feindliche Killerkommandos im Einsatzgebiet. Aufgrund Zivilbevölkerung Feuerdisziplin wahren. Eigene Kräfte: Einzelne Patrouillen im Stadtgebiet und an den Ausfallstraßen. Overlord, Ende.", 
+        ["Iron Watch, hier Overlord. Lage: Präsident Zementska rückt im Konvoi an. Absetzpunkt: Sammelpunkt Alpha. Von dort bewegt er sich zu Fuß durch das Stadtgebiet. Auftrag: Sicherung des VIP, lückenlose Deckung und Geleit bis zu Exfiltrationspunkt Vasylivka. Feindlage: Mögliche feindliche Killerkommandos im Einsatzgebiet. Aufgrund Zivilbevölkerung Feuerdisziplin wahren. Eigene Kräfte: Einzelne Patrouillen im Stadtgebiet und an den Ausfallstraßen. Overlord, Ende.", 
         "command_briefing", 
-        28,
+        33,
         true
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
@@ -92,6 +92,20 @@
     ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
 
 }] call zen_custom_modules_fnc_register;
+
+["Rozbiti Holovy - Radio Calls", "4 - End Mission Call",
+{
+  params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    [
+        ["Iron, hier Overlord. Gute Arbeit! Feindkräfte ziehen sich zurück. Sammeln bei Evac 311. Overlord, Ende.", 
+        "command_rtb", 
+        7,
+        true
+    ], "USER\rscMessage\createMessageRsc.sqf"] remoteExec ["BIS_fnc_execVM"];
+
+}] call zen_custom_modules_fnc_register;
+
 
 
 ["Rozbiti Holovy - Convoy", "enemy_convoy_motorized", {
