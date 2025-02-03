@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=534;
+		nextID=547;
 	};
 	class Camera
 	{
@@ -6881,7 +6881,7 @@ class Mission
 			};
 			id=1707;
 			type="Land_BrokenCarGlass_01_4x4_F";
-			atlOffset=0.053131104;
+			atlOffset=0.053161621;
 		};
 		class Item24
 		{

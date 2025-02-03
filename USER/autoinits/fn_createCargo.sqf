@@ -7,7 +7,7 @@ private _group = createGroup east;
 	[{
 		params ["_type", "_group", "_vehicle"];
 		private _unit = _group createUnit [_type, [0,0,0], [], 0, "NONE"];
-		_unit moveInCargo _vehicle;
+		_unit moveInAny _vehicle;
 	}, [_x, _group, _vehicle], random 20] call CBA_fnc_waitAndExecute;
 } forEach [
 	"rhs_msv_emr_sergeant",
