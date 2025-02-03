@@ -86,7 +86,7 @@ class speech_fabrik_person
 class speech_fabrik_applause
 {
 	name	= "speech_fabrik_applause";
-	sound[]	= {"\USER\sounds\speech_fabrik_applause.ogg", 1, 1.0 };
+	sound[]	= {"\USER\sounds\speech_fabrik_applause.ogg", 3, 1.0 };
 	titles[] = {};
 };
 

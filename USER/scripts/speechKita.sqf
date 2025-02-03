@@ -14,5 +14,6 @@ zementska setvariable ["speech_running", true];
 		deleteVehicle _sound;
 	};
 	zementska setRandomLip false;
+	zementska say3D ["speech_fabrik_applause", 200];
 	zementska setvariable ["speech_running", false];
 }, [_sound]] call CBA_fnc_waitUntilAndExecute;

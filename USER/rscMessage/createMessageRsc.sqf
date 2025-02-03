@@ -35,7 +35,7 @@ _ctrlGroup ctrlCommit 0.2;
 private _ctrlBackground = _display ctrlCreate ["RscTextMulti", -1, _ctrlGroup];
 _ctrlBackground ctrlSetPosition [0, safeZoneH - BOX_H, safeZoneW, BOX_H];
 _ctrlBackground ctrlSetBackgroundColor [0, 0, 0, 0.6];
-_ctrlBackground ctrlSetText "ENTER TEXT:";
+_ctrlBackground ctrlSetText "";
 _ctrlBackground ctrlEnable false;
 _ctrlBackground ctrlCommit 0;
 
@@ -47,7 +47,7 @@ _ctrlMessage ctrlCommit 0;
 
 private _ctrlAdditionalText = _display ctrlCreate ["RscStructuredText", -1, _ctrlGroup];
 _ctrlAdditionalText ctrlSetPosition [0, safeZoneH - BOX_H/1.02, safeZoneW*2, BOX_H];
-_ctrlAdditionalText ctrlSetStructuredText parseText ("<t size='1' font='EtelkaNarrowMediumPro' color='#666666'>- TRANSMISSION INCOMING - TRANSMISSION INCOMING - TRANSMISSION INCOMING - TRANSMISSION INCOMING - TRANSMISSION INCOMING - </t>");
+_ctrlAdditionalText ctrlSetStructuredText parseText ("<t size='1' font='EtelkaNarrowMediumPro' color='#666666'>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -TRANSMISSION INCOMING - TRANSMISSION INCOMING - TRANSMISSION INCOMING - TRANSMISSION INCOMING - TRANSMISSION INCOMING - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</t>");
 _ctrlAdditionalText ctrlCommit 0; 
 
 private _textWidth = ctrlTextWidth _ctrlMessage;

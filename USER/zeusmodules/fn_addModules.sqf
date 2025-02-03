@@ -108,6 +108,17 @@
 
 
 
+["Rozbiti Holovy - Ownership", "Make server owner", {
+     params ["_position", "_object"];
+     
+    if (_object isKindOf "LandVehicle") then {
+        [group _object, 2] remoteExec ["setGroupOwner"];
+    };
+     
+}] call zen_custom_modules_fnc_register;
+
+
+
 ["Rozbiti Holovy - Convoy", "enemy_convoy_motorized", {
      params ["_position", "_object"];
      
