@@ -72,7 +72,7 @@ class priest_prayer
 class speech_fabrik
 {
 	name	= "speech_fabrik";
-	sound[]	= {"\USER\sounds\speech_fabrik.ogg", 3, 1.0 };
+	sound[]	= {"\USER\sounds\speech_fabrik.ogg", 5, 1.0 };
 	titles[] = {};
 };
 
@@ -93,7 +93,7 @@ class speech_fabrik_applause
 class speech_kita
 {
 	name	= "speech_kita";
-	sound[]	= {"\USER\sounds\speech_kita.ogg", 3, 1.0 };
+	sound[]	= {"\USER\sounds\speech_kita.ogg", 4, 1.0 };
 	titles[] = {};
 };
 
